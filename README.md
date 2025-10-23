@@ -20,12 +20,12 @@
 
 ### 1️⃣ clone本專案
 ```bash
-git clone https://github.com/Weber0531/MediaPipe.git
+git clone https://github.com/a0978314359-afk/project000.git
 ```
 
 ### 2️⃣ 移動到專案內
 ```bash
-cd Mediapipe/
+cd project000/
 ```
 
 ### 3️⃣ 安裝套件
