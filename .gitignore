@@ -1,0 +1,6 @@
+.DS_Store
+Education/.DS_Store
+Game/.DS_Store
+__pycache__/
+*.pyc
+test/
