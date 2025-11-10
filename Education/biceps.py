@@ -11,7 +11,11 @@ def cv2AddChineseText(img, text, position, textColor = (255, 255, 255), textSize
     draw.text(position, text, textColor, font=fontStyle)
     return cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)
 
-cap = cv2.VideoCapture(0, cv2.CAP_QT)
+cap = cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+if not cap.isOpened():
+    print("❌ 無法開啟攝影機，請檢查權限或裝置")
+    exit()
+
 
 detector = PoseDetector()
 dir = 0 
