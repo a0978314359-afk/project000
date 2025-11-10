@@ -69,7 +69,10 @@ while True:
                 img = cv2AddChineseText(img, string2, (coordinate[0],coordinate[1] - 75), (255, 255, 255), 30)
                 cv2.rectangle(img, (coordinate[0] - 25, coordinate[1] - 100), (coordinate[0] + 250, coordinate[1] - 25), (0, 0, 0), 2)
 
-        cv2.imshow("Pose", img)   
+        cv2.imshow("Pose", img)  
+        cv2.imshow("Image", img)
+cv2.waitKey(1)
+
     else:
         break
     if cv2.waitKey(1) & 0xFF == ord("q"):
