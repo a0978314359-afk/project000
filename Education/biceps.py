@@ -73,6 +73,33 @@ while True:
         cv2.imshow("Image", img)
 cv2.waitKey(1)
 
+count = 0
+calories = 0  # 新增
+
+...
+
+if angle >= 150: 
+    if dir == 0:
+        count = count + 0.5
+        dir = 1
+if angle <= 50: 
+    if dir == 1:
+        count = count + 0.5
+        dir = 0
+        calories = count * 0.5  # 每次完整動作消耗 0.5 大卡，可自行調整
+
+msg = str(int(count))        
+cv2.putText(img, msg, (50, 150),
+            cv2.FONT_HERSHEY_SIMPLEX, 5,
+            (255, 255, 255), 10)
+
+# 顯示卡路里
+cal_text = f"Calories: {calories:.1f} kcal"
+cv2.putText(img, cal_text, (50, 250),
+            cv2.FONT_HERSHEY_SIMPLEX, 1.5,
+            (0, 255, 255), 3)
+
+
     else:
         break
     if cv2.waitKey(1) & 0xFF == ord("q"):
