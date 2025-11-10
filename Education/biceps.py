@@ -103,3 +103,8 @@ cv2.putText(img, cal_text, (50, 250),
 
 cap.release()
 cv2.destroyAllWindows()
+
+cv2.waitKey(1)
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+
