@@ -31,8 +31,8 @@ while True:
                                             lmList[16], img)
             
             bar = np.interp(angle, (50, 150), (w//2-100, w//2+100))
-            cv2.rectangle(img, (w//2-100, 50), (int(bar), 100),
-                               (0, 255, 0), cv2.FILLED)
+            cv2.rectangle(img, (w//2-100, 50), (int(bar), 100), (0, 0, 255), cv2.FILLED)
+
             cv2.rectangle(img, (220, 50), (420, 100),
                                 (255, 0, 0), 3)
 
