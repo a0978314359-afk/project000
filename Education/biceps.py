@@ -11,7 +11,7 @@ def cv2AddChineseText(img, text, position, textColor = (255, 255, 255), textSize
     draw.text(position, text, textColor, font=fontStyle)
     return cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)
 
-cv2.VideoCapture(0, cv2.CAP_AVFOUNDATION)
+cap = cv2.VideoCapture(0, cv2.CAP_QT)
 
 detector = PoseDetector()
 dir = 0 
