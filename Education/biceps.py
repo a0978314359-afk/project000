@@ -71,19 +71,6 @@ while True:
 
         cv2.imshow("Pose", img)  
         cv2.imshow("Image", img)
-cv2.waitKey(1)
-
-count = 0
-calories = 0  # 新增
-
-...
-
-
-    else:
-        break
-    if cv2.waitKey(1) & 0xFF == ord("q"):
-        break
-
 count = 0
 calories = 0  # 新增
 
@@ -172,6 +159,21 @@ while True:
             cv2.rectangle(img, (coordinate[0]-25, coordinate[1]-100), (coordinate[0]+150, coordinate[1]-25), (0, 0, 0), 2)
         if int(bar) == 420:
             img = cv2AddChineseText(img, string2, (coordinate[0], coordinate[1]-75), (255, 255, 255), 30)
+
+
+cv2.waitKey(1)
+
+count = 0
+calories = 0  # 新增
+
+...
+
+
+    else:
+        break
+    if cv2.waitKey(1) & 0xFF == ord("q"):
+        break
+
 
 ...
 
